@@ -17,11 +17,11 @@ export class ClientesService {
       },
       {
         id: 1,
-        nombre: 'Activos'
+        nombre: 'Nuevo paciente'
       },
       {
         id: 2,
-        nombre: 'Inactivos'
+        nombre: 'Paciente existente'
       },
       {
         id: 3,
@@ -47,8 +47,8 @@ export class ClientesService {
     return {
       id: this.clientes.length,
       nombre: '',
-      cif: '',
-      direccion: '',
+      apellido: '',
+      email: '',
       grupo: 0
     };
   }

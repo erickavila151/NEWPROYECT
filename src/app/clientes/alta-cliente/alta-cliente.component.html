@@ -1,22 +1,38 @@
-<h2 style="color: brown;">Alta cliente</h2>
-<p>
-  <span>Nombre:</span>
-  <input type="text" [(ngModel)]="cliente.nombre">
-</p>
-<p>
-  <span>CIF:</span>
-  <input type="text" [(ngModel)]="cliente.cif">
-</p>
-<p>
-  <span>Dirección:</span>
-  <input type="text" [(ngModel)]="cliente.direccion">
-</p>
-<p>
-  <span>Grupo:</span>
-  <select [(ngModel)]="cliente.grupo">
-    <option *ngFor="let grupo of grupos" value="{{grupo.id}}">{{grupo.nombre}}</option>
-  </select>
-</p>
-<p>
-  <button (click)="this.nuevoCliente()">Guardar</button>
-</p>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div class="container">
+    <div class="title">Registro de pacientes</div>
+    <form action="#">
+      <div class="user-details">
+        <div class="input-box">
+          <span class="details">Nombre</span>
+          <input type="text"placeholder="Nombre" name="name" id="name" [(ngModel)]="cliente.nombre">
+        </div>
+        <div class="input-box">
+          <span class="details">Apellido</span>
+          <input type="text"placeholder="Apellido" name="name" id="name" [(ngModel)]="cliente.apellido">
+        </div>
+        <div class="input-box">
+          <span class="details">Email</span>
+          <input type="email"placeholder="Email" name="email" id="email" [(ngModel)]="cliente.email">
+        </div>
+        <div class="input-box">
+          <span class="details">Tipo de registro</span>
+          <select [(ngModel)]="cliente.grupo">
+            <option *ngFor="let grupo of grupos" value="{{grupo.id}}">{{grupo.nombre}}</option>
+          </select>
+        </div>
+      </div>
+      <div class="button">
+        <input (click)="this.nuevoCliente()" type="submit" value="Guardar">
+      </div>
+    </form>
+  </div>
+</body>
+</html>

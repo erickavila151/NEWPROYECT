@@ -1,11 +1,54 @@
-article {
-    display: flex;
-    border-bottom: 1px solid #ddd;
-    padding: 10px;
+
+  * {
+    font-family: sans-serif; /* Change your font family */
+  }
+  
+  .content-table {
+    border-collapse: collapse;
+    margin: 25px 0;
     font-size: 0.9em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
   }
-  span {
-    display: inline-block;
-    width: 22%;
-    margin-right: 2%;
+  
+  .content-table thead tr {
+    background-color: linear-gradient(-135deg, #58aae0, #7e29a0 );
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
   }
+  
+  .content-table th,
+  .content-table td {
+    padding: 12px 15px;
+  }
+  
+  .content-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+  }
+  
+  .content-table tbody  {
+    background-color: #f3f3f3;
+  }
+  
+  .content-table tbody tr:last-of-type {
+    border-bottom: 2px solid #680aff;
+  }
+  
+  .content-table tbody tr.active-row {
+    font-weight: bold;
+    color: #ff0dcb;
+  }
+
+  body
+  {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6 );
+  }
+
+  
