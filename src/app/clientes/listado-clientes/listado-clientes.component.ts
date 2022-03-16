@@ -8,15 +8,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./listado-clientes.component.css']
 })
 export class ListadoClientesComponent implements OnInit {
-  grupo: Array<Cliente>
 
   clientes!: Cliente[];
-  constructor(private clientesService: ClientesService) { 
-    this.grupo = 
-    [
-      
-    ]
-  }
+  constructor(private clientesService: ClientesService) { }
 
   ngOnInit() {
     this.clientes = this.clientesService.getClientes();

@@ -22,11 +22,7 @@ export class ClientesService {
       {
         id: 2,
         nombre: 'Paciente existente'
-      },
-      {
-        id: 3,
-        nombre: 'Deudores'
-      },
+      }
     ];
     this.clientes = [];
   }
